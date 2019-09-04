@@ -20,7 +20,7 @@ import edu.ap.spring.eightball.redis.RedisService;
 @SpringBootApplication
 public class DemoApplication {
 
-	private String CHANNEL = "edu:ap:redis";
+/*	private String CHANNEL = "edu:ap:redis";
 	@Autowired
 	private RedisService service;
 	
@@ -57,7 +57,7 @@ public class DemoApplication {
 			 // movies
 			 
 		};
-  }
+  }*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
