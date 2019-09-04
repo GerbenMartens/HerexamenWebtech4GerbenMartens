@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class RedisController {
 
     List<String> eightBAllAnswers = Arrays.asList("It is certain.","It is decidedly so.", "Without a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.",
@@ -22,13 +22,13 @@ public class RedisController {
     "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", 
     "Very doubtful.");
      
-   @RequestMapping("/index")
+   @RequestMapping("/")
    public String index(Model model) {
        int random = generateRandom();
        String randomText = eightBAllAnswers.get(random);
        model.addAttribute("text", randomText);
 	   
-	   return randomText;
+	   return "index";
    }
 
     public int generateRandom(){
